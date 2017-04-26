@@ -1,0 +1,283 @@
+/* _content.scss */
+
+@import "../abstract/variables";
+@import "../abstract/colours";
+@import "../abstract/helpers";
+
+//-----------------------------------------------------------------   HERE BE DRAGONS! ------------------------------------------------------------------------
+
+//BE VERY VERY SURE you know what you are doing before you try and simplify this annoyingly redundant highly coupled css.
+
+//The interaction of a curved bottom that potentially overlaps buttons inside carousel panels that are moving and absolutely positioned and have scaling images 
+//and overlays and variable text is a killer combo!
+
+//I cannot see a way to keep it all in correct positions and proportions as the text reflows without the repeated specific heights & paddings. If you can
+//see a way go ahead and try, but there are a lot of moving parts in here and some browsers (IE11 etc) flash the overflowed inner content briefly before plopping
+// on the curve, so setting matching heights on the image and overlay as are set on the container seems the only robust cross browser fix. 
+
+//The container needs so many heights because text reflow seriously messes with the necessary space at smaller sizes, and we can't just set the container to wrap
+//the content automatially because we have to absolutely position it all. 
+
+//But the curve was the real pain!  First attempt was border radius on an outer container of course, that would have been really nice but it turned out that had 
+//to be 120% oversized and overflow:hidden inside another container to hide the undesirable ugly ends of the curve. It was going well, but then the whole 
+//setup failed to contain inner content in webkit browser for some bizarre reason, so the curve effectively disappeared in webkit.
+
+//So then if we couldnt use border radius we had to use some sort of overlay curve img, which tended to capture any pointer events aimed at any button inside 
+//that it overlapped. Setting pointer events :none has no effect in IE10. Inline svgs are the only IE10 compatible img format that can be given pointer-events:none
+//but it turns out they have rendering / redraw issues on screen resize in Chrome!! 
+
+//So the final approach was to tweak the curve and button positions so we just dont get overlap, and use an svg to get small file size and clean edges even when big, 
+//but it has to be a background image of a div not an IMG or IE will render it wrong, (thanks again IE)
+
+
+
+.vctr-banner-container{
+   width:100%;
+   display:block;
+   overflow:hidden;
+   position:relative;
+   margin-bottom:30px;
+  
+   .vctr-curve{
+       background-image:url('../Images/vctr-curve-bottom-short.svg');
+       background-position:center bottom;
+       background-size:180%;
+       background-repeat:no-repeat;
+       height:130px;
+       width:100%;
+       position:absolute;
+       bottom:-1px;
+       left:0;
+       right:0;
+       pointer-events:none;
+
+       @media (max-width: $screen-lg-max){
+            background-size:150%;
+            height:100px;
+        }
+
+       @media (max-width: $screen-md-max){
+            background-size:120%;
+        }
+
+        @media (max-width: $screen-sm-max){
+            background-size:110%;
+        }
+
+ 
+   }
+
+    .slick-dots{
+        position:absolute;
+        bottom:25px;
+        li{
+            width:12px;
+            margin:4px;
+
+            &.slick-active button{
+                background-color: $navbar-link-color;
+            }
+
+            button{
+                border:1px solid $navbar-link-color;
+                border-radius:10px;
+                height:10px;
+                width:10px;
+                padding:2px;
+                margin-right:2px;
+                &:before{
+                    content:'';
+                }
+            }
+        }
+    }
+}
+
+
+
+.vctr-banner-carousel{
+    float:left;
+    width:100%;
+    background-color:$navbar-header-background-color;
+    height:580px;
+    overflow:hidden;
+    margin-bottom:0 !important;
+    @media (max-width: $screen-lg-max){
+        height:550px;
+    }
+
+    @media (max-width: $screen-md-max){
+        height:530px;
+    }
+
+    @media (max-width: $screen-sm-max){
+        height:430px;
+    }
+
+    @media (max-width: $screen-xs-max){
+        height:410px;
+    }
+
+    @media (max-width: $screen-xxs-tall-max){
+        height:450px;
+    }
+
+
+    .vctr-banner-outer{
+        overflow:hidden;
+        position:relative;
+        margin-bottom:0 !important;
+
+        .vctr-banner-image-wrapper{
+            position:relative;
+            overflow:hidden;
+            height:580px;
+            @media (max-width: $screen-lg-max){
+                height:550px;
+            }
+            @media (max-width: $screen-md-max){
+                height:530px;
+            }
+
+            @media (max-width: $screen-sm-max){
+                height:430px;
+            }
+
+            @media (max-width: $screen-xs-max){
+                height:410px;
+            }
+
+            @media (max-width: $screen-xxs-tall-max){
+                height:450px;
+            }
+
+            .vctr-banner-image{
+                 display:block;
+                 background-position:center;
+                 background-size:cover;
+                 background-repeat:no-repeat;
+                 height:100%;
+            }
+
+            .vctr-banner-overlay{
+                 position:absolute;
+                 width:100%;
+                 top:0;
+                 background-image:linear-gradient(to bottom, $navbar-header-background-color, rgba(31, 57, 76, 0)), linear-gradient(rgba(0, 51, 91, 0.4), rgba(0, 51, 91, 0.4));
+                 height:100%
+            }
+ 
+        }
+
+        .vctr-banner-inner{
+            position:absolute;
+            top:0;
+            margin-left:auto;
+            margin-right:auto;
+            left: 0;
+            right: 0;
+
+  
+            .vctr-banner{
+   
+                margin-top:230px;
+                display:block;
+                color:$content-primary-color-reversed;
+                text-align: center;
+                width:100% !important;
+    
+                @media (max-width: $screen-sm-max){
+                    margin-top:110px;
+                }
+      
+             
+                .vctr-banner-message{
+                    max-width:$screen-lg-min;
+                    margin:0 auto;
+
+                    .vctr-banner-heading{
+                        @include heading;
+                         padding:0 8%;
+
+                   
+                        @media (max-width: $screen-sm-max){
+                            padding:0 14%;
+                        }
+                        @media (max-width: $screen-xs-max){
+                            padding:0 14%;
+                        }
+                         @media (max-width: $screen-xs-tall-max){
+                            padding:0 20px;
+                        }
+                    }
+
+                    .vctr-banner-subheading{
+                        @include feature-paragraph;
+                        padding: 0 15%;
+                  
+                        @media (max-width: $screen-sm-max){
+                            padding: 0 17%;
+                        }
+                        @media (max-width: $screen-xs-max){
+                            padding:0 17%;
+                        }
+                        @media (max-width: $screen-xs-tall-max){
+                            padding:0 20px;
+                        }
+                    }
+
+                    .vctr-banner-button{
+                        margin-top:30px;
+                        @media (max-width: $screen-xs-max){
+                            margin-top:20px;
+                        }
+                        @media (max-width: $screen-xs-tall-max){
+                            margin-top:15px;
+                            display:block;
+                            margin-left:20px;
+                            margin-right:20px;
+                            width:auto;
+                        }
+                    }
+                }
+            }
+          
+        
+        }
+        
+    }
+
+}
+
+.vctr-button-row{
+    /* cant have this inside the sliders, buttons fail, so it needs its own container outside*/
+    margin-top:-284px;
+    height:40px;
+    
+    .slick-arrow{
+        width:26px;
+        height:26px;
+        &:before{
+            width:30px;
+            height:30px;
+        }
+    }
+
+    .slick-prev{
+        left:15px;
+        &:before{
+            content:url('../images/vctr-prev.svg');
+        }
+    }
+
+    .slick-next{
+        right:15px;
+            &:before{
+            content:url('../images/vctr-next.svg');
+        }
+    }
+
+
+}
+ 
+

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="53px" height="71px" viewBox="0 0 53 71" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M6.16505041,6.12801906 C10.1208825,2.1769739 15.3747474,-7.10542736e-15 20.9665233,-7.10542736e-15 C26.5518008,-7.10542736e-15 31.812164,2.1769739 35.7614978,6.12801906 C43.1338043,13.4988628 44.045189,27.3730099 37.6784925,35.8583342 L20.9665233,60 L4.22531179,35.8209683 C-2.11051788,27.3730099 -1.20563144,13.4988628 6.16505041,6.12801906 L6.16505041,6.12801906 Z" id="path-1"></path>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="0.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="0" dy="3" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.51372549   0 0 0 0 0.568627451   0 0 0 0 0.607843137  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2" transform="translate(6.000000, 3.000000)">
+            <g id="Stroke-567">
+                <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                <use stroke="#062438" stroke-width="1" fill="#072438" fill-rule="evenodd" xlink:href="#path-1"></use>
+            </g>
+            <path d="M22.7030912,12.171034 C22.8146912,15.792634 20.2814912,18.189634 17.9900912,20.359234 C16.9256912,21.367234 15.8252912,22.408834 14.9624912,23.557834 C13.6226912,25.342234 13.1342912,27.132034 13.4696912,29.027434 C14.0732912,32.442634 17.2622912,35.464234 19.9112912,37.440634 C19.8776912,33.484834 22.2800912,31.204234 24.4382912,29.156434 C26.4116912,27.282634 28.2764912,25.513234 28.4378912,22.564834 C28.6052912,19.477834 26.7248912,16.061434 22.7030912,12.171034 M21.1340912,40.476634 C20.9474912,40.476634 20.7602912,40.423834 20.5970912,40.317034 C16.9208912,37.924234 12.3644912,34.083034 11.5310912,29.370034 C11.1020912,26.942434 11.7272912,24.589234 13.3880912,22.375234 C14.3504912,21.093034 15.5126912,19.993234 16.6364912,18.928834 C19.5500912,16.171234 21.8516912,13.992634 20.1758912,9.74583403 C20.0096912,9.32583403 20.1506912,8.84583403 20.5190912,8.58363403 C20.8850912,8.32143403 21.3860912,8.34123403 21.7292912,8.63523403 C27.7988912,13.810834 30.6356912,18.403234 30.4028912,22.672234 C30.1994912,26.401834 27.8582912,28.623634 25.7936912,30.583834 C23.3174912,32.935234 21.1784912,34.964434 22.0976912,39.287434 C22.1798912,39.676834 22.0196912,40.078834 21.6920912,40.303834 C21.5234912,40.419034 21.3296912,40.476634 21.1340912,40.476634" id="Fill-166" fill="#AAC341"></path>
+        </g>
+    </g>
+</svg>

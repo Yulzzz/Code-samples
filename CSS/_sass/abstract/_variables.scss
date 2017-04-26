@@ -1,0 +1,28 @@
+/* _variables.scss */
+
+$base-font-size: 16px;
+
+$button-font-size: $base-font-size;
+$button-small-font-size: 14px;
+$button-minimum-width: 145px;
+
+$content-gutter-left: 3.5em;
+
+$screen-xs-min: 320px;
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+
+$screen-xs-max: $screen-sm-min - 1px;
+$screen-sm-max: $screen-md-min - 1px;
+$screen-md-max: $screen-lg-min - 1px;
+
+$screen-xs-tall-max: 479px;
+$screen-xxs-tall-max: 365px;
+$screen-lg-max: 1600px;
+
+
+
+$bootstrap-col-sm-offset-1: 8.33333333;
+
+$content-container-min-height: 420px;

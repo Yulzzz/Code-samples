@@ -1,0 +1,47 @@
+﻿/*  _main.scss */
+
+/* Do not put the css styles here but instead drop the styles into the 
+    appropriate SASS file under the sass folder. 
+    
+    Follow the Sass guidelines at https://sass-guidelin.es */
+
+@charset 'utf-8';
+
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/base';
+@import 'base/styleguide';
+
+@import 'layout/header'; 
+@import 'layout/footer';
+
+@import 'modules/articles'; 
+@import 'modules/buttons'; 
+@import 'modules/content'; 
+@import 'modules/breadcrumb'; 
+@import 'modules/banner'; 
+@import 'modules/gallery';
+@import 'modules/tabs'; 
+@import 'modules/repeater'; 
+@import 'modules/table';
+@import 'modules/search';
+@import 'modules/dividend';
+@import 'modules/form';
+@import 'modules/map';
+@import 'modules/outages';
+@import 'modules/reports';
+@import 'modules/meetings';
+@import 'modules/small-promo';
+@import 'modules/calendar';
+@import 'modules/column-content';
+@import 'modules/promo';
+@import 'modules/notifications';
+@import 'modules/customer-value';
+@import 'modules/vector-typoraphy';
+@import 'modules/payment';
+@import 'modules/faq-accordion';
+@import 'modules/news-header';
+
+@import 'slick/slick';
+@import 'slick/slick-theme';
+

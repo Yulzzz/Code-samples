@@ -1,0 +1,62 @@
+﻿/* _vector-typoraphy */ /*vector requested global typgraphy styles*/
+
+@import "../abstract/variables";
+@import "../abstract/colours";
+@import "../abstract/helpers";
+.vector-typography{
+    h1{
+        font-size:32px;
+        text-transform:uppercase;
+        font-family: Bryant-Bold, Arial, Helvetica, sans-serif;
+        line-height:40px;
+    }
+    h2 {
+        font-size:32px;
+        text-transform:none;
+        font-family: Bryant-Bold, Arial, Helvetica, sans-serif;
+        line-height:40px;
+    }
+    h3 {
+        font-size:28px;
+        text-transform:uppercase;
+        font-family: Bryant-Bold, Arial, Helvetica, sans-serif;
+    }
+    h4 {
+        font-size:28px;
+        text-transform:none;
+        font-family: Bryant, Arial, Helvetica, sans-serif;
+        font-weight:normal;
+    }
+    h5{
+        font-size:22px;
+        text-transform:uppercase;
+        font-family: Bryant-Bold, Arial, Helvetica, sans-serif;
+    }
+    h6{
+        font-size:22px;
+        text-transform:uppercase;
+        font-family: Bryant, Arial, Helvetica, sans-serif;
+        font-weight:normal;
+    }
+    @media(max-width:$screen-xs-max){
+        h1{
+            font-size:28px;
+        }
+        h2 {
+            font-size:26px;
+        }
+        h3 {
+            font-size:24px;
+        }
+        h4 {
+            font-size:24px;
+        }
+        h5{
+            font-size:20px;
+        }
+        h6{
+            font-size:20px;
+
+        }
+    }
+}

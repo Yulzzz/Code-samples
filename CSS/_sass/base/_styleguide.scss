@@ -1,0 +1,45 @@
+﻿/*_styleguide.scss*/
+@import "../abstract/helpers";
+@import "../abstract/variables";
+@import "../abstract/colours";
+
+.vctr-btn.vctr-button-primary.btn {
+    min-width:220px;
+    text-align:center;
+    font-size:14px;
+    text-align:center;
+}
+
+.blue-theme{
+    background-color:$cerulean;
+    color:$white;
+    .vctr-button-primary.btn{
+        padding:12px 50px 12px;
+        border:2px solid $button-primary-color;
+        &:hover,
+        &:focus,
+        &:active{
+            opacity:0.5;
+            border:2px solid $button-primary-color;
+            background-color:transparent;
+        }
+    }
+}
+.dark-blue-theme{
+    background-color:$tiber;
+    color:$white;
+    .vctr-button-primary.btn{
+        padding:12px 50px 12px;
+        border:2px solid $button-primary-color;
+        background-color:transparent;
+        font-size:14px;
+        letter-spacing: 1px;
+        &:hover,
+        &:focus,
+        &:active{
+            opacity:0.5;
+            border:2px solid $button-primary-color;
+            background-color:transparent;
+        }
+    }
+}

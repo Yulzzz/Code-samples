@@ -1,0 +1,56 @@
+﻿/* _dividend.scss */
+
+@import "../abstract/variables";
+@import "../abstract/colours";
+@import "../abstract/helpers";
+.dividend-calc{
+    padding:75px 50px 85px;
+    margin-top:0;
+    p{
+        @include paragraph;
+    }
+    .dividend-calc-header{
+        text-align:center;
+    }
+    .dividend-boxes{
+        padding:20px 0;
+        text-align:center;
+        background-color:$white;
+        margin-top:30px;
+        .dividend-box{
+            h4{
+                font-size:1.25rem;
+                color:$tiber;
+            }
+            h1{
+                font-family: Bryant-Bold;
+                color:$cerulean;
+                font-size:44px;
+                margin-top:0;
+            }
+        }
+    }
+    .form-control{
+        border: none;
+        height:auto;
+        padding:12px;
+        margin-bottom:25px;
+        border-radius:2px;
+        font-size:1rem;
+    }
+    label{
+        margin-top:15px;
+        font-family: Bryant;
+    }
+    .vctr-dividend-button{
+        text-align:center;
+        .vctr-button-primary.btn{
+            color: $button-primary-color;
+            border-color: $button-primary-border-color;
+            background-color: $button-primary-background-color;
+        }
+    }
+     @media (max-width:$screen-sm-max){
+        padding:20px 0;
+     }
+}

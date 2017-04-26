@@ -1,0 +1,86 @@
+/* _gallery.scss */
+
+@import '../abstract/variables';
+@import '../abstract/colours';
+@import "../abstract/helpers";
+
+
+$image-max-width: 100%;
+$image-max-height: 240px;
+
+.vctr-media-gallery {
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+    .MediaGalleryFolderTree,
+    .MediaLibrarySort,
+    .photoSeparator {
+        display: none;
+    }
+
+    .MediaGalleryContent,
+    .Pager {
+        text-align: center;
+    }
+
+    .mediaItem {
+        display: inline-block;
+
+        &:nth-of-type(2) {
+            .mediaLibraryTeaser {
+                float: right !important;
+
+                @media screen and (max-width: $screen-sm-min - 1) {
+                    float: none !important;
+                }
+            }
+        }
+
+        &:nth-of-type(4) {
+            .mediaLibraryTeaser {
+                float: left !important;
+
+                @media screen and (max-width: $screen-sm-min - 1) {
+                    float: none !important;
+                }
+            }
+        }
+
+        .mediaLibraryTeaser {
+            img {
+                max-width: $image-max-width;
+                max-height: $image-max-height;
+            }
+
+            .vctr-image-description {
+                padding-top: .5em;
+
+                color: $gallery-description-color;
+            }
+        }
+    }
+
+    .Pager {
+        position: relative;
+
+        float: left;
+
+        width: 100%;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+
+        a {
+            font-size: 2.5em;
+
+            color: $button-pager-color;
+            &:focus,
+            &:hover {
+                text-decoration: none;
+
+                color: $button-pager-color-hover;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,93 @@
+﻿/* _meetings.scss */
+
+@import "../abstract/variables";
+@import "../abstract/colours";
+@import "../abstract/helpers";
+.meeting{
+    padding: 75px 0;
+    p{
+        @include paragraph;
+    }
+    .meeting-header{
+        text-align:center;
+        padding-bottom:50px;
+        h2{
+            margin-top:30px;
+        }
+        h5{
+            margin-bottom:30px;
+        }
+        .vctr-button-primary{
+            color: $button-primary-color;
+            background-color: $button-primary-background-color;
+            font-size:14px;
+            letter-spacing:1px;
+        
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: $button-primary-background-color-hover;
+            }
+        }
+    }
+    .meeting-annual-meeting, .meeting-special-meeting{
+        padding:30px 50px;
+        .meeting-annual-meeting-date, .meeting-special-meeting-date{
+            text-transform:uppercase;
+            font-family: Bryant-Bold;
+            font-size:18px;
+        }
+        h2{
+            margin-top:0;
+        }
+    }
+    .meeting-annual-meeting-links, .meeting-special-meeting-links{
+        margin-bottom:20px;
+        color:$cerulean;
+
+        a{
+            padding:0 10px;
+            font-size:24px;
+            font-family: Bryant-Bold;
+            border-right:2px solid $cerulean;
+            word-break: break-all;
+            color:inherit;
+            &:hover{
+                opacity:0.5;
+                text-decoration:none;
+            }
+            &:first-child{
+                padding-left:0;
+            }
+            &:last-child{
+                border-right:none;
+            }
+
+        }
+
+    }
+    @media (max-width:$screen-sm-max){
+        padding:20px 10px;
+        .meeting-header{
+            img{
+                width:70px;
+            }
+        }
+        .meeting-annual-meeting, .meeting-special-meeting{
+            padding:30px 5px;
+            .meeting-special-meeting-links, .meeting-annual-meeting-links{
+                a{
+                    font-size:16px;
+                    padding:0;
+                    border:none;
+                }
+            }
+
+        }
+     }
+    @media (max-width:$screen-xs-tall-max){
+        .vctr-button-primary{
+            width:100%;
+        }
+    }
+}

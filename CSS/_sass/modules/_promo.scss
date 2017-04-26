@@ -1,0 +1,81 @@
+﻿/* _promo.scss */
+
+@import "../abstract/variables";
+@import "../abstract/colours";
+@import "../abstract/helpers";
+
+/* Add here promo styling */
+
+.vctr-promo{
+    background-color:$promo-background-color;
+    display:table;
+    float:left;
+    width:100%;
+    .vctr-promo-content{
+        display:table-cell;
+        vertical-align:middle;
+        text-align:left;
+        width:50%;
+        padding-top:50px;
+        padding-bottom:50px;
+        color:$promo-text-color;
+
+        @media (max-width:$screen-sm-max){
+            padding-top:30px;
+            padding-bottom:30px;
+        }
+
+
+        @media (max-width:$screen-xs-max){
+            width:100%;
+            padding:0;
+            float:left;
+            text-align:center;
+            display:block;
+        }
+
+        .vctr-inner-content{
+            width:570px;
+            float:right;
+            padding-right:6%;
+            padding-bottom:20px;
+            p{
+                @include feature-paragraph;
+                margin-bottom:25px;
+            }
+
+            @media (max-width:$screen-md-max){
+                width: 470px;
+            }
+
+            @media (max-width:$screen-sm-max){
+                width: 360px;
+                p{
+                    margin-bottom:25px;
+                }
+            }
+
+            @media (max-width:$screen-xs-max){
+                width: 100%;
+                padding:20px 15px 40px;
+                p{
+                    margin-bottom:25px;
+                }
+            }
+        }
+    }
+    .vctr-promo-image{
+        width: 50%;
+        padding-bottom:28%;/* keep image proportions about right*/
+        display:table-cell;
+        @include background-center-cover;
+
+        @media (max-width:$screen-xs-max){
+            width:100%;
+            padding-bottom:56%;
+            float:left;
+            display:block;
+        }
+    }
+     
+}

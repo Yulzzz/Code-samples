@@ -1,0 +1,42 @@
+/* _reset.scss */
+
+@import "../abstract/variables";
+@import "../abstract/colours";
+
+/* Add here all browser and/or UI framework overrides/resets */
+
+
+.navbar{
+    border-radius:0;
+}
+
+a[href^="tel"]{/* thanks for styling phone numbers blue apple :-( */
+    color:inherit;
+    text-decoration:none;
+}
+
+/*Bug https://pksvso.visualstudio.com/Vector/_workitems?id=18310&_a=edit - images max width*/
+img{
+    max-width:100%;
+}
+/*
+ * Let's target IE to respect aspect ratios and sizes for img tags containing SVG files
+ *
+ * [1] IE9
+ * [2] IE10+
+ */
+/* 1 */
+.ie9 img[src$=".svg"] {
+  width: 100%; 
+}
+/* 2 */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  img[src$=".svg"] {
+    width: 100%; 
+  }
+}
+
+.StandardZone .WebPartZoneHeader{
+    z-index: 111;
+    position: relative;
+}

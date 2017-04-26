@@ -1,0 +1,78 @@
+﻿/*_payment.scss module, also using styling from _form.scss*/
+
+@import "../abstract/variables";
+@import "../abstract/colours";
+@import "../abstract/helpers";
+
+#payment-control {
+    .vctr-payment-title{
+        text-align:center;
+    }
+    .form-control{
+        margin-bottom:0;
+    }
+    .form-group{
+        margin-bottom:0;
+        &.required {
+            label {
+                &:after {
+                    content: '*';
+                }
+                @media(max-width:$screen-sm-max){
+                    margin-top:10px;
+                }
+            }
+        }
+    }
+    .vctr-field{
+        padding-bottom:25px;
+
+    }
+    #enquirySubmit{
+        width:100%;
+        text-align:center;
+        margin-top:30px;
+        input.btn{
+            float:none;
+        }
+    }
+    .vctr-payment-message{
+        margin-bottom:20px;
+    }
+    > div > div > span{
+        position:absolute;
+        top:-20px;
+        color:$error-text-color;
+        font-size: .85em;
+    }
+    @media(max-width:$screen-xs-max){
+        input[type='text'],
+        input[type='number'],
+        textarea, .form-control {
+          font-size: 16px;
+        }
+    }
+
+}
+.vctr-form-control-error {
+    font-size: .85em;
+    padding: .5em .2em;
+    color: $error-text-color;
+    position: relative;
+    div{
+        position:absolute;
+
+    }
+    .vctr-form-datepicker & {
+        margin-left: 1em;
+        margin-top: -1em;
+    }
+}
+
+#payment-response-control{
+    text-align: center;
+    font-size: 2.5rem;
+    font-family: Bryant-Bold;
+    margin-top: 60px;
+}
+    

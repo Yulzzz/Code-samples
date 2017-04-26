@@ -1,0 +1,55 @@
+/* _typography.scss */
+
+@import "../abstract/variables";
+@import "../abstract/colours";
+@import "../abstract/helpers";
+
+
+/* Add here all base font setting  */
+@font-face {
+  font-family: Bryant;
+  src: url("../fonts/Bryant-Regular.eot") format("embedded-opentype"),
+      url("../fonts/Bryant-Regular.woff") format("woff"),
+      url("../fonts/Bryant-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Bryant-Bold;
+  src: url("../fonts/Bryant-Bold.eot") format("embedded-opentype"),
+         url("../fonts/Bryant-Bold.woff") format("woff"),
+         url("../fonts/Bryant-Bold.ttf") format("truetype");
+  font-style: normal;
+}
+
+html {
+  font-size: 16px;
+  font-weight:normal;
+  font-family: Bryant, Arial, Helvetica, sans-serif;
+  @media (max-width: $screen-sm-min) {
+    font-size: 14px;
+  }
+}
+
+h2 {
+    @include heading;
+}
+h5{
+    font-size: 1.5rem;
+    font-family: Bryant;
+    line-height: 1.35em;
+}
+h6{
+    @include caption;
+}
+
+p{
+   @include paragraph;
+}
+ul, ol{
+    @include paragraph;
+    li{
+        @include paragraph;
+    }
+}

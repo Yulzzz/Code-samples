@@ -1,0 +1,240 @@
+﻿/* _tabs.scss */
+
+@import "../abstract/variables";
+@import "../abstract/colours";
+@import "../abstract/helpers";
+
+/* Add here tabs styling */
+.vctr-tabbed-content{
+    /* some injects CSS is overriding the basic styles*/
+
+    font-family:Bryant !important;
+     .ajax__tab_container, .jq-tab-accordion{
+        min-height:200px;
+        border-left:1px solid $tabbed-content-border-color;
+        border-right:1px solid $tabbed-content-border-color;
+        border-bottom:1px solid $tabbed-content-border-color;
+        margin-top:30px;
+        margin-bottom:50px;
+        padding:0;
+        .ajax__tab_header,.ui-tabs-nav{
+            display:table;
+            table-layout: fixed;/* forcing equal widths */
+            width:100%;
+            background:none;
+            font-family:Bryant;
+
+            /* Some sort of poxy overrides needed here for injected xp css*/
+            .ajax__tab_tab{
+                background:none;
+                padding:0;
+            }
+           .ajax__tab_active .ajax__tab_outer, 
+           .ajax__tab_hover .ajax__tab_outer, 
+            .ajax__tab_active .ajax__tab_tab, 
+            .ajax__tab_hover .ajax__tab_tab, .ui-tabs-tab{
+                background:none;
+                span{
+                   background:none;
+                }
+            }
+
+            .ajax__tab_outer, .ui-tabs-tab{
+                background:none;
+                height:auto;
+                padding:0;
+                .ajax__tab_inner, .ui-tabs-tab{
+                    background:none;
+                    height:auto;
+                    padding:0;
+                }
+            }
+
+            > span, .ui-tabs-anchor{
+                display:table-cell;
+                vertical-align:middle;            
+                width:2%;/* forcing equal widths */
+            }
+
+            > span:first-child > span, .ui-tabs-anchor{
+                border-left:none;
+            }
+
+            > span:last-child > span, .ui-tabs-anchor{
+                border-right:none;
+            }
+        }
+
+        .ajax__tab_active .ajax__tab_outer, .ui-tabs-active{
+            border-top:1px solid $tabbed-content-active-border-color;
+            box-shadow: inset 0px 3px 0px 0px $tabbed-content-active-border-color;
+            border-bottom:transparent;
+            border-left:1px solid $tabbed-content-border-color;
+            border-right:1px solid $tabbed-content-border-color;
+
+            a{
+                color:$tabbed-content-active-link-color;
+            }
+
+        }
+
+        .ajax__tab_outer, .ui-tabs-nav{
+            width:100%;
+            text-align:center;
+            border-top:1px solid $tabbed-content-border-color;
+            border-bottom:1px solid $tabbed-content-border-color;
+
+            > span{
+                display:block;
+           
+
+                a{
+                    @include caption;
+                    color:$tabbed-content-link-color;
+                    width:100%;
+                    display:table;
+                    height:70px;
+                    padding-top:3px;
+                    padding-left:20px;
+                    padding-right:20px;
+                    text-align: center;
+                    background:none;
+                    span{
+                        vertical-align:middle;
+                        display:table-cell;
+                    }
+                    &:focus{
+                        outline:none;
+                    }
+
+                    @media (max-width: $screen-xs-max){
+                        height:56px;
+                    }
+
+                }
+            }
+        }
+        .ajax__tab_body{
+            border:none;
+            .ajax__tab_panel{
+                padding:50px 30px;
+                 font-family:Bryant !important;
+                 font-size:16px;
+                 @media (max-width: $screen-xs-max){
+                     padding:30px 10px;
+                     .col-xs-12{
+                         padding:0;
+                     }
+                 }
+            }
+        }
+
+    }
+     .ui-tabs{
+         .ui-tabs-nav{
+             border-top:0 !important;
+             border-left:0;
+             border-right:0;
+             border-radius:0;
+             padding:0;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-flex-direction: row;
+            -webkit-justify-content: center;
+            -ms-flex-direction: row;
+            flex-direction: row;
+
+            @media (max-width:$screen-sm-max){
+                -webkit-flex-direction: column;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            }
+            .ui-tabs-tab{
+                flex-grow:1;
+                text-align:center;
+                margin:0;
+                border-radius:0;
+                border-left:0;
+                position:relative;
+                &:last-child{
+                    border-right:0;
+                }
+                
+                .ui-tabs-anchor{
+                    width:100%;
+                    text-transform:uppercase;
+                    padding:20px 0;
+                    color:$tabbed-content-link-color;
+                    
+                }
+
+            }
+            .ui-tabs-active{
+                
+                .ui-tabs-anchor{
+                    color:$tabbed-content-active-link-color;
+                }
+            }
+            .ui-tabs-active:after{
+                content:'';
+                position: absolute; 
+                width:100%;
+                height: 5px;
+                background:$white;
+                bottom: -3px;
+                left: 0;
+            }
+         }
+     }
+     .ui-widget-content{
+         font-family:Bryant;
+         border-radius:0;
+         border-color:$tabbed-content-border-color;
+     }
+
+}
+.inMobile{
+    .ui-accordion-header{
+        font-family:Bryant;
+        text-align:center;
+        background-color:transparent;
+        @include caption;
+        border-radius:0;
+        margin-bottom:0;
+        border-left:none;
+        border-right:0;
+        border-color:$tabbed-content-border-color;
+        border-bottom:none;
+        color:$tabbed-content-link-color;
+        &:focus{
+            outline:none;
+        }
+
+    }
+    .ui-accordion-header-active{
+            border-top:1px solid $tabbed-content-active-border-color;
+            box-shadow: inset 0px 3px 0px 0px $tabbed-content-active-border-color;
+            border-bottom:transparent;
+            color:$tabbed-content-active-link-color;
+
+    }
+    .ui-accordion-header-icon{
+        display:none;
+    }
+    .ui-accordion-content{
+        height:auto !important;
+        border-radius:0;
+        border-bottom:none;
+        border-left:none;
+        border-right:none;
+    }
+    .ui-accordion-content{
+        .vctr-tabbed-content &{
+            padding: 1em 0.5em;
+        }
+        
+    }
+}

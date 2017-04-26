@@ -1,0 +1,186 @@
+/*  _colours.scss */
+
+$tiber: #072438;
+$blue-zodiac: #0e2e4c;
+$blue-dianne: #1f394c;
+$fiord: #395060;
+$cerulean: #00a9e0;
+$deep-cerulean: #0077ae;
+
+$crimson: #e81937;
+$tango: #e87722;
+$apricot: #ffeedd;
+
+$turmeric: #aac341;
+
+$regent-gray: #83919b;
+$geyser: #d0dae2;
+$wild-sand: #f5f5f5;
+$athens-gray: #f5f7f9;
+$alto: #d8d8d8;
+
+$white: #ffffff;
+
+$blue-bayoux: #516573;
+$americano: #827570;
+$palid:rgba(255,255,255,0.2);
+$anemic:rgba(255,255,255,0.4);
+
+
+$content-primary-color: $tiber;
+$content-primary-color-reversed: $white;
+
+$link-color-reversed:$white;
+$link-color-reversed-hover:darken($white, 15%);
+$link-color-reversed-active:$turmeric;
+$link-color-reversed-selected:lighten($turmeric,30%);
+
+$link-color:$cerulean;
+$link-color-hover:opacify($cerulean, 0.5);
+
+$link-primary-color: $cerulean;
+$link-primary-color-hover: $cerulean;
+$link-primary-color-selected: lighten($link-primary-color, 10%);
+
+$button-primary-color: $white;
+$button-primary-background-color: $cerulean;
+$button-primary-border-color: $cerulean;
+$button-primary-background-color-hover: lighten($button-primary-background-color, 6%);
+$button-primary-border-color-hover: darken($button-primary-background-color-hover, 7%);
+$button-primary-border-color-focus: darken($button-primary-border-color, 10%);
+
+$button-secondary-color: $cerulean;
+$button-secondary-background-color: $white;
+$button-secondary-border-color: $cerulean;
+$button-secondary-background-color-hover: $athens-gray;
+$button-secondary-border-color-hover: darken($button-secondary-border-color, 7%);
+$button-secondary-border-color-focus: darken($button-secondary-border-color, 10%);
+
+$button-tertiary-color: $blue-zodiac;
+$button-tertiary-background-color: $white;
+$button-tertiary-border-color: $blue-zodiac;
+$button-tertiary-background-color-hover: $athens-gray;
+$button-tertiary-border-color-hover: darken($button-tertiary-border-color, 7%);
+$button-tertiary-border-color-focus: darken($button-tertiary-border-color, 10%);
+
+$button-active-color: $white;
+$button-active-background-color: $tiber;
+$button-active-border-color: $tiber;
+$button-active-background-color-hover: lighten($button-active-background-color, 6%);
+$button-active-border-color-hover: darken($button-active-background-color-hover, 7%);
+$button-active-border-color-focus: darken($button-active-border-color, 10%);
+
+$button-image-color: $cerulean;
+$button-image-background-color: $white;
+$button-image-color-hover: $cerulean;
+$button-image-background-color-hover: $athens-gray;
+
+$autocomplete-dropdown-background-color-active: $wild-sand;
+
+$line-separator-border-color: $alto;
+
+$form-control-primary-color: $tiber;
+$form-control-disabled-color: $regent-gray;
+$form-control-error-color: $tango;
+$form-control-placeholder-color: $regent-gray;
+$form-control-border-color-focus: $turmeric;
+$form-control-border-color-error: $tango;
+$form-control-checkbox-hover-background-color: $athens-gray;
+
+$navbar-color: $white;
+$navbar-link-color: $white;
+$navbar-active-link-background-color:$blue-dianne;
+$navbar-active-link-border-color:$turmeric;
+$navbar-active-link-color:$turmeric;
+
+$navbar-link-color-hover: $turmeric;
+$navbar-link-color-disabled: $regent-gray;
+
+$navbar-header-background-color: $blue-dianne;
+$navbar-nav-top-background-color: $tiber;
+$navbar-nav-links-background-color: $fiord;
+$navbar-nav-dropdown-background-color: $tiber;
+$navbar-mobile-level1-background-color:$athens-gray;
+$navbar-mobile-level1-color:$tiber;
+
+$navbar-mobile-level2-background-color:$blue-dianne;
+$navbar-mobile-level3-background-color:$tiber;
+
+
+$navbar-nav-circles-color: $regent-gray;
+$navbar-nav-circles-active: $turmeric;
+
+$breadcrumb-color:$tiber;
+
+$tabbed-content-border-color:$geyser;
+$tabbed-content-link-color:$regent-gray;
+$tabbed-content-active-link-color:$tiber;
+$tabbed-content-active-border-color:$cerulean;
+
+$table-border-color: $geyser;
+$table-heading-background-color: $geyser;
+$table-heading-background-color-alt: $athens-gray;
+$table-background-color: $athens-gray;
+
+$accordion-heading-color: $deep-cerulean;
+$accordion-heading-background-color: $athens-gray;
+$accordion-heading-border-color: $geyser;
+$accordion-toggle-background-color-hover: $athens-gray;
+
+$repeater-date-color:$regent-gray;
+
+$datepicker-color: $content-primary-color;
+$datepicker-active-background-color: $cerulean;
+
+$filename-color: $deep-cerulean;
+$file-upload-error-color: $tango;
+$file-upload-progress-background-color: $deep-cerulean;
+
+$quotation-invalid-error-color: $tango;
+$terms-conditions-background-color: $athens-gray;
+
+$help-icon-background-color: $turmeric;
+$help-icon-background-color-hover: lighten($help-icon-background-color, 6%);
+$help-icon-border-color: $help-icon-background-color;
+$help-icon-border-color-hover: darken($help-icon-background-color, 7%);
+$help-content-background-color: $white;
+$help-content-border-color: $geyser;
+
+
+$footer-background-color: $blue-dianne;
+$footer-tagline-color: $blue-bayoux;
+$footer-copyright-color: $regent-gray;
+$footer-background-color:$tiber;
+$footer-color:$white;
+$footer-muted-color:$blue-bayoux;
+$footer-copyright-color:$regent-gray;
+$footer-social-background-color:$blue-dianne;
+
+$help-button-color: $americano;
+
+$button-pager-color: $regent-gray;
+$button-pager-color-hover: darken($button-pager-color, 6%);
+
+$search-highlight-background-color: $anemic;
+$search-bottom-border-color: $palid;
+$search-progressive-background-color:$blue-dianne;
+
+$gallery-description-color: $regent-gray;
+
+$map-popup-border-color: $tiber;
+$map-notify-color: $white;
+$map-notify-background-color: $turmeric;
+
+$promo-background-color:$turmeric;
+$promo-text-color:$white;
+
+$article-link-color:$cerulean;
+$article-hover-link-color:$deep-cerulean;
+$article-header-overlay-start:rgba(31, 57, 76, 0.7);
+$article-header-overlay-end:rgba(31, 57, 76, 0.03);
+
+
+$notification-bar-homepage-background:$cerulean;
+
+$error-background-color:$apricot;
+$error-text-color:$crimson;

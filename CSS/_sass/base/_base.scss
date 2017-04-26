@@ -1,0 +1,63 @@
+/* _base.scss */
+
+@import "../abstract/variables";
+@import "../abstract/colours";
+@import "../abstract/helpers";
+
+html{
+    height:100%;
+    overflow-x: hidden;
+}
+body {
+    font-size: $base-font-size;
+    color: $content-primary-color;
+    font-family: Bryant, Arial, Helvetica, sans-serif;
+    -webkit-overflow-scrolling: touch;
+    min-height:100%;
+    height:100% !important;
+    @media(max-width:$screen-xs-max){
+        overflow-y: scroll; /* has to be scroll, not auto (for scroll momentum on mobile maybe) */
+        max-width:100%;
+        overflow-x:hidden;
+    }
+}
+
+body > form{
+    position:relative;
+
+}
+
+.vctr-content-wrapper{
+  min-height: calc(100vh - 240px);//height of viewport minus fixed height of footer
+  position:relative;
+}
+
+
+.vctr-text-link, a {
+    color: $link-primary-color;
+    font-family: Bryant-Bold;
+    &:link, &:visited {
+        color: $link-primary-color;
+    }
+
+    &:focus, &:hover {
+        opacity:0.5;
+        color: $link-primary-color;
+        text-decoration:none;
+        cursor:pointer;
+    }
+    &:active {
+        color: $link-primary-color;
+    }
+}
+
+.vctr-text-block {
+    min-height: 100px;
+    padding: 0.5em 1.5em;
+}
+
+.vctr-text-capitalize {
+    &:first-letter {
+        text-transform: capitalize;
+    }
+}

@@ -1,0 +1,134 @@
+﻿/* _helpers.scss */
+@import "./colours";
+@import './variables';
+
+@mixin content-padding {
+    padding: 1.25em;
+}
+
+@mixin content-block-margins-relaxed{
+    margin-top:50px;
+    margin-bottom:50px;
+}
+
+@mixin content-block-margins-compact{
+    margin-top:30px;
+    margin-bottom:30px;
+}
+
+@mixin button-base {
+    font-size: $button-font-size;
+    font-family: Bryant-Bold;
+
+    padding: 10px 0;
+
+    text-transform: uppercase;
+
+    border-width: 2px;
+
+    min-width: $button-minimum-width;
+}
+
+@mixin button-rounded {
+    border-radius: 100px;
+}
+
+@mixin form-control-box-shadow($border-color) {
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba($border-color, .6);
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba($border-color, .6);
+}
+
+/* Depending on rem when bootstrap changes the base font size with mdiea queries only works if the fonts all scale proportionally in the design. They don't*/
+@mixin paragraph{
+    font-size:18px;
+    line-height:22px;
+    @media (max-width:$screen-xs-max){
+        font-size:16px;
+        line-height:20px;
+    }
+}
+
+@mixin feature-paragraph{
+    font-size: 24px;
+    font-family: Bryant;
+    line-height: 32px;
+
+    @media (max-width: $screen-md-max){
+       font-size:20px;
+       line-height: 28px;
+    }
+    @media (max-width: $screen-sm-max){
+        font-size:18px;
+        line-height: 24px;
+    }
+                   
+    @media (max-width:$screen-xs-max){
+        font-size:16px;
+        line-height:20px
+    }
+}
+
+@mixin caption{
+    font-size:18px;
+    font-family:Bryant-Bold;
+    text-transform:uppercase;
+    line-height:20px;
+
+     @media (max-width:$screen-xs-max){
+        font-size:14px;
+        line-height:18px;
+    }
+}
+
+
+@mixin heading{
+    font-size: 35px;//35px
+    text-transform:uppercase;
+    font-family:Bryant-Bold;
+    line-height:41px;
+    @media (max-width: $screen-md-max){
+        font-size:30px;
+        line-height:35px;
+
+    }
+    @media (max-width: $screen-sm-max){
+        font-size:26px;
+        line-height:30px
+    }
+
+    @media (max-width:$screen-xs-max){
+        font-size:22px;//22px
+        line-height:24px;//24px
+    }
+}
+@mixin bold-link{
+    color:$link-color;
+    text-decoration:none;
+    font-family:Bryant-Bold;
+    &:hover{
+        text-decoration:none;
+        color:$link-color-hover;
+    }
+}
+
+@mixin bold-link-reversed{
+    color:$link-color-reversed;
+    text-decoration:none;
+    font-family:Bryant-Bold;
+    &:hover{
+        text-decoration:none;
+        color:$link-color-reversed-hover;
+    }
+}
+
+@mixin background-center-cover{
+    background-position:center;
+    background-size:cover;
+    background-repeat:no-repeat;
+}
+
+@mixin background-center-contain{
+    background-position:center;
+    background-size:contain;
+    background-repeat:no-repeat;
+}

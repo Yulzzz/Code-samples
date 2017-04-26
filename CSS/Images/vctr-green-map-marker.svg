@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="49px" height="65px" viewBox="0 0 49 65" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M20.5,0 C9.23429812,0 0,9.19377615 0,20.4100418 C0,31.2583682 18.6529828,55.5290272 19.3921049,56.4484833 C19.5764914,56.8164226 20.130439,57 20.5,57 C20.869561,57 21.4235086,56.8164226 21.6078951,56.4484833 C22.3470172,55.3454498 41,31.2583682 41,20.4100418 C41,9.19377615 31.7657019,0 20.5,0 L20.5,0 Z M32,20.0003977 C32,26.152475 26.9661556,31 21,31 C14.8477003,31 10,25.9663376 10,20.0003977 C10,13.847525 15.0338444,9 21,9 C27.1522997,9 32,13.847525 32,20.0003977 L32,20.0003977 Z" id="path-1"></path>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.666666667   0 0 0 0 0.764705882   0 0 0 0 0.254901961  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Modules" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="CM-01-12-Map-Module" transform="translate(-919.000000, -381.000000)">
+            <g id="Group-2" transform="translate(1.000000, 0.000000)">
+                <g id="Group" transform="translate(922.000000, 383.000000)">
+                    <ellipse id="Oval-2" fill="#D0DAE2" style="mix-blend-mode: multiply;" cx="20" cy="57" rx="14" ry="4"></ellipse>
+                    <g id="Page-1">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#AAC341" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

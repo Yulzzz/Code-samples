@@ -1,0 +1,123 @@
+﻿/* _form.scss */
+
+@import "../abstract/variables";
+@import "../abstract/colours";
+@import "../abstract/helpers";
+
+.vctr-form{
+    padding:60px 10px;
+    #enquiryHeader{
+        text-align:center;
+        h6{
+            text-transform:uppercase;
+        }
+    }
+    label{
+        font-family: Bryant;
+    }
+    .EditingFormErrorLabel{
+        font-size:14px;
+    }
+    .form-control{
+        border-radius: 2px;
+        background-color: #f5f7f9;
+        border: solid 1px #d0dae2;
+        height:auto;
+        padding:12px;
+        font-size:1rem;
+        margin-bottom:12px;
+    }
+    textarea{
+        min-height:175px;
+    }
+    #enquiryFirstName, #enquiryLastName, #enquiryEmail, #enquiryPhone, #enquiryAttachment, #enquirySubmit {
+        width:49%;
+        display:block;
+        float:left;
+    }
+    #enquiryFirstName, #enquiryEmail{
+        margin-right: 1.3%;
+        clear:left;
+
+    }
+    #enquiryMessage{
+        clear:left;
+    }
+    #enquiryTypeField .form-control{
+        width: 100%;
+    }
+    #enquirySubmit{
+        input{
+            float:right;
+            &.btn{
+                color: $button-primary-color;
+                border-color: $button-primary-border-color;
+                background-color: $button-primary-background-color;
+                width:220px;
+                text-align:center;
+                border-radius: 100px;
+                font-size: 16px;
+                font-family: Bryant-Bold;
+                text-transform: uppercase;
+                padding:12px 50px 12px;
+                height:45px;
+                    @media (max-width: $screen-xs-tall-max){
+                    width:100%;
+            }
+        }
+    }
+    }
+    @media(max-width:$screen-lg-min){
+        #enquiryFirstName, #enquiryLastName, #enquiryEmail, #enquiryPhone, #enquiryAttachment, #enquirySubmit {
+            width:48%;
+
+        }
+        #enquiryFirstName, #enquiryEmail{
+            margin-right: 2%;
+
+        }
+    }
+    @media(max-width:$screen-xs-max){
+        #enquiryFirstName, #enquiryLastName, #enquiryEmail, #enquiryPhone, #enquiryAttachment, #enquirySubmit {
+            width:100%;
+
+        }
+        #enquirySubmit{
+            text-align:center;
+            input{
+                margin-top:20px;
+                float:none;
+                &.btn{
+                    width:100%;
+                }
+                
+            }
+
+        }
+    }
+
+    .EditingFormErrorLabel{
+        color:$error-text-color;
+        display:inline-block;
+        position:relative;
+        top:-8px;
+        left:-5px;
+    }
+
+    .ErrorLabel{
+        min-height:47px;
+        line-height:20px;
+        background-color:$error-background-color;
+        padding:13px 10px;
+        margin-bottom:30px;
+        width:100%;
+        color:$error-text-color;
+        display:block;
+        font-size:1.1em;
+    }
+}
+#payment-control > div > span{
+    position: absolute;
+    top: -10px;
+    color:red;
+}

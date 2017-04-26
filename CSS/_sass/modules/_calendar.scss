@@ -1,0 +1,43 @@
+﻿/* _calendar.scss */
+
+@import "../abstract/variables";
+@import "../abstract/colours";
+@import "../abstract/helpers";
+
+.vctr-calendar{
+    padding:75px;
+    p{
+        @include paragraph;
+    }
+    .vctr-calendar-header{
+        text-align:center;
+        h2{
+            margin-top:30px;
+            margin-bottom:50px;
+        }
+    }
+    .vctr-cal-event{
+        h5, h6{
+            display:inline-block;
+        }
+        h6 {
+            width:15%;
+            min-width:50px;
+            vertical-align: top;
+            padding-top: 10px;
+
+        }
+        h5{
+            width:83%;
+        }
+    }
+     @media (max-width:$screen-sm-max){
+         padding:5px;
+         .vctr-cal-event{
+            h5{
+                width:80%;
+            }
+         }
+
+     }
+}

@@ -1,0 +1,18 @@
+﻿/* _small-promo.scss */
+
+@import "../abstract/variables";
+@import "../abstract/colours";
+@import "../abstract/helpers";
+.vctr-small-promo{
+    text-align:center;
+    color:$content-primary-color-reversed;
+    background-color:$promo-background-color;
+    @include caption;
+    padding:15px;
+    p{
+        @include paragraph;
+    }
+    a{
+        color:$content-primary-color-reversed;
+    }
+}

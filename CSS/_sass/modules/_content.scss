@@ -1,0 +1,201 @@
+/* _content.scss */
+
+@import "../abstract/variables";
+@import "../abstract/colours";
+@import "../abstract/helpers";
+/* Add here content styling */
+.vctr-blue-background{
+    background-color:$navbar-nav-top-background-color;
+}
+
+.vctr-main-content{
+
+}
+
+
+/*Decision Control*/
+.btn-container{
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-pack:center;
+    justify-content:center;
+    -webkit-flex-direction: row;
+    -webkit-justify-content: center;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    .vctr-decision-footer{
+        .vctr-btn{
+            margin:0 20px;
+        }
+    }
+
+    @media (max-width:$screen-sm-max){
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+        .vctr-decision-footer{
+            .vctr-btn{
+                margin: 7px auto;
+            }
+        }
+
+    }
+    p{
+        @include paragraph;
+    }
+}
+
+/*image Only Webpart*/
+.vctr-img-only{
+    text-align:center;
+    padding:100px 0;
+    h2{
+        margin-top: 0px;
+    }
+    p{
+        @include paragraph;
+    }
+    h5{
+        @include feature-paragraph;
+        padding:0 6%;
+    }
+    .vctr-img-only-icons{
+        margin-top: 75px;
+        img{
+            margin-bottom:15px;
+            width:120px;
+            height:120px;
+        }
+        h6{
+            @include caption;
+            padding:0 6%;
+
+        }
+        .icon-description{
+            width:24%;
+            display:inline-block;
+            vertical-align:top;
+        }
+    }
+    @media(max-width:$screen-lg-min){
+        padding:70px 0;
+        .vctr-img-only-icons{
+            margin-top:20px;
+        }
+    }
+     @media (max-width:$screen-sm-max){
+         padding-top:40px;
+         .vctr-img-only-icons{
+            .icon-description{
+                width:49%;
+            }
+         }
+
+     }
+}
+
+/*Dividend Calculator*/
+.dividend-calc .dividend-boxes {
+    display: none;
+}
+
+/*TeamProfileControl*/
+.peopleList{
+    padding:55px 0;
+    h6{
+        text-transform:uppercase;
+        margin-top: 30px;
+        margin-bottom: 0;
+    }
+    p{
+        @include paragraph;
+    }
+    .qualification{
+        color:$regent-gray;
+        margin-bottom:25px;
+    }
+    .highlights{
+        margin-bottom:25px;
+        text-transform:uppercase;
+    }
+    .person{
+        width: 310px;
+        display: inline-block;
+        margin-right: 100px;
+        vertical-align:top;
+        margin-top:20px;
+        &:nth-child(3n+3){
+            margin-right:0;
+        }
+    }
+
+    @media(max-width:$screen-lg-min){
+        .person{
+            width:32%;
+            padding:0 10px;
+            margin-right:0;
+            img{
+                width:100%;
+            }
+        }
+    }
+    @media (max-width: $screen-sm-min){
+        .person{
+            width:90%;
+            img{
+                width:inherit;
+            }
+        }
+     }
+}
+.load-more{
+    text-align:center;
+    margin:30px 0 50px;
+}
+.vctr-tabbed-content{
+    .peopleList{
+        padding:0;
+        .person{
+            width: 280px;
+
+        }
+        @media(max-width:$screen-lg-min){
+            .person{
+                width:49%;
+                padding:0 10px;
+                margin-right:0;
+                img{
+                    width:100%;
+                }
+            }
+        }
+        @media (max-width: $screen-sm-min){
+            .person{
+                width:99%;
+                img{
+                    width:inherit;
+
+                }
+            }
+         }
+    }
+
+}
+/*Shares Module*/
+.shares-module{
+    padding:50px 0;
+    text-align:center;
+    @media(max-width:$screen-sm-min){
+        img{
+            width:100%;
+                }
+                }
+            }
+
+     
+
+
+
+
+

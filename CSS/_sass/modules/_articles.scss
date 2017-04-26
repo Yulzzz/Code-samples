@@ -1,0 +1,70 @@
+﻿/* _articles.scss */
+
+@import "../abstract/variables";
+@import "../abstract/colours";
+@import "../abstract/helpers";
+
+.vctr-article-header-wrapper{
+    position:relative;
+    overflow:hidden;
+    height:340px;
+    
+    @media (max-width: $screen-xs-max){
+        height: 240px;
+    }
+
+    .vctr-article-header{
+         display:block;
+         height:100%;
+    }
+  
+
+    .vctr-article-header-overlay{
+        position:absolute;
+        width:100%;
+        top:0;
+        background-image:linear-gradient(to bottom, $article-header-overlay-start, $article-header-overlay-end), linear-gradient(rgba(0, 51, 91, 0.4), rgba(0, 51, 91, 0.4));
+        height:100%
+    }
+    .vctr-article-header-content{
+        color:$content-primary-color-reversed;
+    }
+    h4{
+        font-family: Bryant-Bold;
+        text-transform:uppercase;
+        margin-top:140px;
+        text-shadow: 3px 3px 9px rgba(0,0,0,0.4);
+
+        @media (max-width: $screen-xs-max){
+            margin-top:60px;
+        }
+    }
+    h2{
+        width:66%;
+        text-shadow: 3px 3px 9px rgba(0,0,0,0.4);
+        @media (max-width: $screen-xs-max){
+            width:100%;
+        }
+    }
+}
+
+
+
+
+.vctr-article-text{
+    @include feature-paragraph;
+    padding-top:70px;
+    padding-bottom:70px;
+    text-align:justify;
+    @media (max-width: $screen-xs-max){
+        padding-top:40px;
+        padding-bottom:40px;
+    }
+    > p{
+       @include feature-paragraph;
+       margin-bottom:1em;
+    }
+    a{
+        @include bold-link;
+    }
+}

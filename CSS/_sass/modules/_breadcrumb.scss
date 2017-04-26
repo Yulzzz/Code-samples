@@ -1,0 +1,29 @@
+/* _content.scss */
+
+@import "../abstract/variables";
+@import "../abstract/colours";
+@import "../abstract/helpers";
+
+
+/* Add here content styling */
+.vctr-breadcrumbs{
+    padding:50px 0 30px;
+    text-transform:uppercase;
+    font-size:14px;
+    color:$breadcrumb-color;
+
+    span{
+        font-family: Bryant-Bold;
+    }
+    i{
+        font-family: Bryant;
+        font-style:normal;
+        padding:0 7px;
+    }
+    a{
+        color:$breadcrumb-color;
+    }
+    @media(max-width:$screen-xs-max){
+        padding: 15px 0 0;
+    }
+}

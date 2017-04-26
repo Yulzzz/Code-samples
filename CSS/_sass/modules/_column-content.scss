@@ -1,0 +1,108 @@
+﻿/* _column-content.scss */
+
+@import "../abstract/variables";
+@import "../abstract/colours";
+@import "../abstract/helpers";
+/*Two column content module*/
+.vctr-two-column-content{
+    .two-column-wrapper{
+        padding-top:50px;
+        padding-bottom:75px;
+        float:left;
+        .vctr-icon{
+            text-align:center;
+        }
+        p{
+            @include paragraph;
+        }
+        @media (max-width:$screen-sm-max){
+            padding-top:40px;
+            padding-bottom:60px;
+        }
+
+        @media (max-width:$screen-xs-max){
+            padding-top:10px;
+            padding-bottom:40px;
+        }
+
+        .two-column-left{
+            float:left;
+            width: 50%;
+            text-align:left;
+            padding-right:16%;
+ 
+            h2{
+                margin-bottom:40px;
+                 @media (max-width:$screen-xs-max){
+                    margin-bottom:0;
+                    text-align:center;
+                 }
+            }
+            .vctr-left-column-image-wrapper{
+                img{
+                    width:100%;
+                }
+            }
+
+            @media (max-width:$screen-xs-max){
+               width:100%;
+               padding:0;
+               &.has-title{
+                  padding:0;
+               }
+               float:left;
+               text-align:center;
+   
+               .vctr-left-column-image-wrapper{
+                   padding:5% 15%;
+               }
+            }
+        }
+        .two-column-right{
+            width: 50%;
+            float:left;
+
+            h5{
+                @include feature-paragraph;
+                margin-bottom:30px;
+            }
+     
+            @media (max-width:$screen-xs-max){
+               width:100%;
+               float:none;
+               text-align:center;
+               .vctr-btn{
+                   margin:auto;
+               }
+            }
+        }
+    }  
+}
+
+/*One column content module*/
+.vctr-one-column-main{
+    text-align:center;
+    padding:75px 10px;
+    h2{
+        margin-top:30px;
+    }
+    h5{
+        margin-bottom:30px;
+    }
+    .vctr-btn{
+        margin:auto;
+        font-size:14px;
+        
+    }
+    p{
+        @include paragraph;
+    }
+    a{
+        color:inherit;
+        letter-spacing:1px;
+        &:hover{
+            opacity:0.5;
+            text-decoration:none;
+        }
+    }
+}

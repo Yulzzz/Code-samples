@@ -1,0 +1,63 @@
+﻿/*_faq-accordion*/
+@import "../abstract/variables";
+@import "../abstract/colours";
+@import "../abstract/helpers";
+
+.vctr-faq-accordion{
+    padding-top:75px;
+    font-family:Bryant;
+    .vctr-faq-title-icon, .vctr-faq-title{
+        display:inline-block;
+        margin-right:10px;
+        vertical-align:middle;
+    }
+    h5.ui-accordion-header{
+        @include caption;
+        padding:30px 0;
+        color:$link-color;
+        background:none;
+        border-left:none;
+        border-right:none;
+        border-bottom:none;
+        margin:0;
+        border-color:$tabbed-content-border-color;
+        &:focus{
+            outline:none;
+        }
+        &.ui-state-active{
+            border-bottom:1px $tabbed-content-border-color solid;
+            @media(max-width:$screen-xs-max){
+                .ui-accordion-header-icon{
+                    transform: rotate(180deg);
+                }
+                
+            }
+        }
+        &:last-child{
+            border-bottom:1px $tabbed-content-border-color solid;
+        }
+        .ui-accordion-header-icon{
+            display:none;
+        }
+        @media(max-width:$screen-xs-max){
+            position:relative;
+            padding-right:30px;
+            .ui-accordion-header-icon{
+                background:url('../Images/vctr-accordion-blue.png');
+                background-size:cover;
+                position: absolute;
+                right: 5px;
+                height: 28px;
+                width: 28px;
+                z-index: 1;
+                display:block;
+            }
+        }
+    }
+    div.ui-accordion-content.ui-widget-content{
+        @include paragraph;
+        font-family:Bryant;
+        padding:25px 0;
+        border:none;
+    }
+}

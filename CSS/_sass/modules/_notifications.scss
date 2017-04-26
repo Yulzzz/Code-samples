@@ -1,0 +1,71 @@
+﻿/* _notifications.scss */
+
+@import "../abstract/variables";
+@import "../abstract/colours";
+@import "../abstract/helpers";
+
+
+/* Add here notifications styling */
+
+.vctr-homepage-notification-background{
+    background-color:$notification-bar-homepage-background;
+}
+#secondHomepageNotification, #breakingNews{
+    @media(max-width:$screen-xs-max){
+
+        position:relative;
+        z-index:12;
+    }
+}
+.vctr-homepage-notification{
+    height:50px;
+    vertical-align:middle;
+    color:$content-primary-color-reversed;
+    @include paragraph;
+    text-align:center;
+    #secondHomepageNotification &, #breakingNews &{
+        @media(max-width:$screen-xs-max){
+            height:auto;
+            position:relative;
+            z-index:12;
+        }
+    }
+    .vctr-notification-message{
+        #secondHomepageNotification &, #breakingNews &{
+            display:inline-block;
+            padding:16px 0;
+            @media(max-width:$screen-xs-max){
+                width:80%;
+                text-align:left;
+            }
+        }
+        a{
+           @include bold-link-reversed;
+           text-decoration:underline !important;
+        }
+    }
+
+    .vctr-notification-close{
+        margin-top:11px;
+        width:28px;
+        height:28px;
+        background-image:url('../Images/vctr-cancel.png');
+        background-repeat:no-repeat;
+        background-position:center;
+        background-size:contain;
+        float:right;
+        display:block;
+        #secondHomepageNotification &, #breakingNews &{
+            @media(max-width:$screen-xs-max){
+                width:40px;
+                height:40px;
+                background-size:cover;
+                
+            }
+        }
+    }
+}
+.orange-theme{
+    background-color:$tango;
+    color:$white;
+}
